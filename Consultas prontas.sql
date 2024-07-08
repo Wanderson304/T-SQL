@@ -10,3 +10,6 @@ SELECT CustomerID, CustomerName, Country
 FROM Customers
 ORDER BY Country;
 
+//Agregação count
+
+
