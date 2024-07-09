@@ -13,6 +13,18 @@ ORDER BY Country;
 
 //Consulta com mais de um filtro
 SELECT * FROM Customers
-WHERE City = 'México D.F.' AND PostalCode = '05033 '
+WHERE City = 'México D.F.' AND PostalCode = '05033'
+
+//Consulta com base em parte de uma plavra, 
+//Que contem x palavra.
+SELECT CustomerName as nome, Address as Endereço
+FROM Customers
+WHERE CustomerName LIKE '%helados%'
+
+//Selecionar clientes onde a 2º palavra do nome tem a letra "a"
+SELECT * FROM Customers
+WHERE CustomerName LIKE '_a%'
+
+
 
 
