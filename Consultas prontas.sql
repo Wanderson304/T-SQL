@@ -25,6 +25,9 @@ WHERE CustomerName LIKE '%helados%'
 SELECT * FROM Customers
 WHERE CustomerName LIKE '_a%'
 
+//Selecionar cliemnte que tenha uma das letras no nome, que estão no cochates]]
+SELECT * FROM Customers
+WHERE CustomerName LIKE '[abct]%'
 
 
 
