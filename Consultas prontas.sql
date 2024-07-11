@@ -29,5 +29,21 @@ WHERE CustomerName LIKE '_a%'
 SELECT * FROM Customers
 WHERE CustomerName LIKE '[abct]%'
 
+//Consultar os clientes cujo países começam com a lera "A"
+SELECT * FROM Customers
+WHERE Country LIKE 'A%'
+
+//Consultar os clientes cujo países tem a segunda letra A
+SELECT * FROM Customers
+WHERE Country LIKE '_a%'
+
+//Consultar todos os produtos que tenham "Guaraná" no ProductName
+SELECT * FROM products
+WHERE ProductName LIKE '%Guaraná%'
+
+//Consultar todos os clientes da cidade de São Paulo e que tenha contato com um nome "Pedro"
+SELECT * FROM Customers
+WHERE City = "São Paulo" AND ContactName LIKE '%Pedro%'
+
 
 
