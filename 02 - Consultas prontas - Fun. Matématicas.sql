@@ -21,3 +21,9 @@ FROM Products;
 SELECT MIN(Price) as MENOR_preco_produtos 
 FROM Products;
 
+//Quantidade de clientes de cada país. O rsultado deverá ter o nome de páis e a quantidade
+de clientes em ordem decrescete de número de clientes (tabela Customers)
+SELECT COUNT(*) as Quantidade, Country 
+FROM Customers
+GROUP BY Country
+ORDER BY COUNT(*) DESC;
