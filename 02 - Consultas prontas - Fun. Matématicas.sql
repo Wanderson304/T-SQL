@@ -9,4 +9,7 @@ FROM Customers;
 SELECT COUNT(DISTINCT Country) 
 FROM Customers;
 
+//Caucular a média do preço dos produtos
+SELECT AVG(Price) as media_preco_produtos 
+FROM Products;
 
