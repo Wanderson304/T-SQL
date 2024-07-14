@@ -13,3 +13,11 @@ FROM Customers;
 SELECT AVG(Price) as media_preco_produtos 
 FROM Products;
 
+//Produto com o maior preço  / produto mais caro.
+SELECT MAX(Price) as MAIOR_preco_produtos 
+FROM Products;
+
+//Produto com o menor preço  / produto mais mais barato.
+SELECT MIN(Price) as MENOR_preco_produtos 
+FROM Products;
+
