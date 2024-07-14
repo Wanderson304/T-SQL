@@ -5,4 +5,8 @@
 SELECT COUNT(*) as Numero_clientes
 FROM Customers;
 
+//Contar o número de pai´sis sem repetições (Que não se repetem na tabela)
+SELECT COUNT(DISTINCT Country) 
+FROM Customers;
+
 
