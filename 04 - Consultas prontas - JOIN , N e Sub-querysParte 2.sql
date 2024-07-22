@@ -17,3 +17,8 @@ FROM Products LEFT join Categories ON Products.CategoryID = Categories.CategoryI
 SELECT Orders.OrderID, Shippers.ShipperName, Shippers.Phone
 FROM Orders LEFT JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
 
+/*Consultar a quantidade de orders/venda de cada um dos empregados. O resultado deve ter nome do empregado e 
+a quantaidade de orders por empregado, mesmo que o mepregado não tennha nenhuma venda/resultado */
+SELECT Employees.FirstName as "Nome Empregado", Count(Orders.OrderID) as "Qnt Vendas"
+FROM Employees LEFT JOIN Orders ON Employees.EmployeeID = Orders.EmployeeID
+GROUP BY Employees.FirstName
