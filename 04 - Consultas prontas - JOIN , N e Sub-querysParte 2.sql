@@ -13,6 +13,7 @@ SELECT Products.ProductName, Categories.CategoryName
 FROM Products LEFT join Categories ON Products.CategoryID = Categories.CategoryID
 
 /*Consultar os Ids das ordens com os nomes e telefones das transportadoras*/
+/*Use o Left Join para retornar todos os itens que exite na tebala da esuqerda*/
 SELECT Orders.OrderID, Shippers.ShipperName, Shippers.Phone
 FROM Orders LEFT JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
 
