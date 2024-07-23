@@ -22,3 +22,22 @@ a quantaidade de orders por empregado, mesmo que o mepregado não tennha nenhuma
 SELECT Employees.FirstName as "Nome Empregado", Count(Orders.OrderID) as "Qnt Vendas"
 FROM Employees LEFT JOIN Orders ON Employees.EmployeeID = Orders.EmployeeID
 GROUP BY Employees.FirstName
+
+/*SUBCONSULTA: Consultar os números das ordens, primeiro e ultimos nomes dos empregados que tenham 'A' como 
+primeira letra do nome. Ultilizar subconsulta como tabela de empregados com letra A (Tabela Empoyees e Orders) */
+SELECT Orders.EmployeeID, empregado.FirstName, empregado.LastName
+FROM Orders JOIN (SELECT * FROM Employees WHERE FirstName LIKE 'A%') as empregados ON 
+Orders.EmployeeID = empregados.EmployeeID;
+
+/*TABELA TEMPORARIA: Trasformar uma consulta em uma tabela temporaria em tempo de consulta*/
+/*A consulta SELECT * FROM Employees WHERE FirstName LIKE 'A%' será uma tabela temporária em empregados_com_a*/
+SELECT *
+FROM (SELECT * FROM Employees WHERE FirstName LIKE 'A%') as "empregados_com_a"
+
+/*OU*/
+
+WITH
+empregados_com_a AS (SELECT * FROM Employees WHERE FirstName LIKE 'A%')
+SELECT *
+FROM empregados_com_a;
+
